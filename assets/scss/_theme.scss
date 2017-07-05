@@ -1,0 +1,234 @@
+body {
+  background: $body_background;
+  font-family: "Raleway", sans-serif;;
+
+  a {
+    color: $default;
+
+    &:hover {
+      color: darken($default, 20%)
+    }
+  }
+
+  // Navbar
+  .navbar {
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+
+    &.navbar-default {
+      background: $default;
+
+      .navbar-brand {
+        color: $navbar_content_color;
+      }
+
+      .navbar-nav {
+        > .active {
+          > a {
+            color: $navbar_content_color;
+            background: darken($default, 20%);
+
+            &:hover, &:active, &:focus {
+              background: darken($default, 20%);
+            }
+          }
+        }
+
+        > li {
+          > a {
+            color: $navbar_content_color;
+
+            &:hover, &:active, &:focus {
+              background: darken($default, 10%);
+            }
+          }
+        }
+
+        > .open {
+          > a, > a:focus, > a:active, > a:hover {
+            background: darken($default, 10%);
+            color: $navbar_content_color;
+          }
+        }
+      }
+    }
+  }
+
+  // Buttons
+  .btn {
+    border-radius: 0px;
+    border: none;
+    transition: all .2s ease-in-out;
+    padding: 8px 30px;
+
+    &:hover {
+      border: none;
+    }
+
+    &:not(.btn-flat) {
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+      &:hover, &:active, &:focus {
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &.btn-default {
+      box-shadow: none;
+      padding: 6px 12px;
+
+      &:hover, &:focus, &:active {
+        background: #FFFFFF;
+      }
+    }
+
+    &.btn-primary {
+      background: $primary;
+
+      &:hover {
+        background: darken($primary, 15%);
+      }
+    }
+
+    &.btn-secondary {
+      background: $secondary;
+      color: $white_text;
+
+      &:hover {
+        background: darken($secondary, 15%);
+      }
+    }
+
+    &.btn-tertiary {
+      background: $tertiary;
+      color: $white_text;
+
+      &:hover {
+        background: darken($tertiary, 15%);
+      }
+    }
+
+    &.btn-success {
+      background: $success;
+
+      &:hover {
+        background: darken($success, 15%);
+      }
+    }
+
+    &.btn-info {
+      background: $info;
+
+      &:hover {
+        background: darken($info, 15%);
+      }
+    }
+
+    &.btn-warning {
+      background: $warning;
+
+      &:hover {
+        background: darken($warning, 15%);
+      }
+    }
+
+    &.btn-danger {
+      background: $danger;
+
+      &:hover {
+        background: darken($danger, 15%);
+      }
+    }
+
+    &.btn-lg {
+      font-size: 16px;
+    }
+
+    &.btn-sm {
+      padding: 5px 20px;
+      font-size: 12px;
+    }
+
+    &.btn-xs {
+      padding: 4px 15px;
+      font-size: 10px;
+    }
+
+    &.btn-fab {
+      border-radius: 50%;
+      font-size: 24px;
+      height: 56px;
+      margin: auto;
+      min-width: 56px;
+      width: 56px;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      line-height: normal;
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-12px, -12px);
+        line-height: 24px;
+        width: 24px;
+        vertical-align: middle;
+      }
+
+      &.btn-lg {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+
+        i {
+          font-size: 35px;
+        }
+      }
+
+      &.btn-sm {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        min-width: 45px;
+
+        i {
+          font-size: 18px;
+        }
+      }
+
+      &.btn-xs {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        min-width: 25px;
+
+        i {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  // Typography
+  .text-primary {
+    color: $primary;
+  }
+
+  .text-warning {
+    color: $warning;
+  }
+
+  .text-danger {
+    color: $danger;
+  }
+
+  .text-info {
+    color: $info;
+  }
+
+  .text-success {
+    color: $success;
+  }
+}
