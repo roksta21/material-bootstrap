@@ -457,54 +457,38 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="well bs-component">
-              <form class="form-horizontal">
+              <form class="">
                 <fieldset>
                   <legend>Legend</legend>
+
                   <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-                    <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
+                    <input required="required" class="form-control" type="text"> 
+                    <label>Name</label>
                   </div>
+
                   <div class="form-group">
-                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                    <div class="col-lg-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Checkbox
-                        </label>
-                      </div>
-                    </div>
+                    <input required="required" class="form-control" type="password"> 
+                    <label>Password</label>
                   </div>
+
                   <div class="form-group">
-                    <label for="textArea" class="col-lg-2 control-label">Textarea</label>
-                    <div class="col-lg-10">
-                      <textarea class="form-control" rows="3" id="textArea"></textarea>
-                      <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-                    </div>
+                    <input type="checkbox"> Checkbox
                   </div>
+
                   <div class="form-group">
-                    <label class="col-lg-2 control-label">Radios</label>
-                    <div class="col-lg-10">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                          Option one is this
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          Option two can be something else
-                        </label>
-                      </div>
-                    </div>
+                    <textarea class=form-control></textarea>
+                    <label>Textarea</label>
+                    <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
                   </div>
+
+                  <div class="form-group">
+                    <input type="radio" name="radio_option"> Option 1
+                    <input type="radio" name="radio_option"> Option 2
+                  </div>
+
                   <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Selects</label>
-                    <div class="col-lg-10">
-                      <select class="form-control" id="select">
+                    <select class="form-control" id="select">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -519,8 +503,8 @@
                         <option>4</option>
                         <option>5</option>
                       </select>
-                    </div>
                   </div>
+
                   <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                       <button type="reset" class="btn btn-default">Cancel</button>
@@ -531,47 +515,48 @@
               </form>
             </div>
           </div>
+
           <div class="col-lg-4 col-lg-offset-1">
 
               <form class="bs-component">
                 <div class="form-group">
-                  <label class="control-label" for="focusedInput">Focused input</label>
                   <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+                  <label class="control-label" for="focusedInput">Focused input</label>
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label" for="disabledInput">Disabled input</label>
                   <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+                  <label class="control-label" for="disabledInput">Disabled input</label>
                 </div>
 
                 <div class="form-group has-warning">
-                  <label class="control-label" for="inputWarning">Input warning</label>
                   <input type="text" class="form-control" id="inputWarning">
+                  <label class="control-label" for="inputWarning">Input warning</label>
                 </div>
 
                 <div class="form-group has-error">
-                  <label class="control-label" for="inputError">Input error</label>
                   <input type="text" class="form-control" id="inputError">
+                  <label class="control-label" for="inputError">Input error</label>
                 </div>
 
                 <div class="form-group has-success">
-                  <label class="control-label" for="inputSuccess">Input success</label>
                   <input type="text" class="form-control" id="inputSuccess">
+                  <label class="control-label" for="inputSuccess">Input success</label>
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label" for="inputLarge">Large input</label>
                   <input class="form-control input-lg" type="text" id="inputLarge">
+                  <label class="control-label" for="inputLarge">Large input</label>
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label" for="inputDefault">Default input</label>
                   <input type="text" class="form-control" id="inputDefault">
+                  <label class="control-label" for="inputDefault">Default input</label>
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label" for="inputSmall">Small input</label>
                   <input class="form-control input-sm" type="text" id="inputSmall">
+                  <label class="control-label" for="inputSmall">Small input</label>
                 </div>
 
                 <div class="form-group">

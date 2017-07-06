@@ -27,5 +27,8 @@
   "author": "sam_roksta <roksta21@gmail.com>",
   "license": "MIT",
   "sass": "assets/scss/_material_bootstrap.scss",
-  "style": "assets/scss/_material_bootstrap.scss"
+  "style": "assets/scss/_material_bootstrap.scss",
+  "dependencies": {
+    "select2": "^4.0.3"
+  }
 }

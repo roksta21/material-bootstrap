@@ -1,6 +1,7 @@
 body {
   background: $body_background;
-  font-family: "Raleway", sans-serif;;
+  font-family: "Raleway", sans-serif;
+  transition: all .2s ease-in-out;
 
   a {
     color: $default;
@@ -50,6 +51,14 @@ body {
             background: darken($default, 10%);
             color: $navbar_content_color;
           }
+        }
+      }
+    }
+
+    .navbar-form {
+      .form-group {
+        .form-control {
+          padding: 3px 6px;
         }
       }
     }
@@ -230,5 +239,466 @@ body {
 
   .text-success {
     color: $success;
+  }
+
+  // Tables
+  table.table {
+    tr.info {
+      td {
+        background: lighten($info, 42%);
+      }
+
+      &:hover, &:focus, &:active {
+        td {
+          background: lighten($info, 38%);
+        }
+      }
+    }
+
+    tr.success {
+      td {
+        background: lighten($success, 38%);
+      }
+
+      &:hover, &:focus, &:active {
+        td {
+          background: lighten($success, 34%);
+        }
+      }
+    }
+
+    tr.warning {
+      td {
+        background: lighten($warning, 28%);
+      }
+
+      &:hover, &:focus, &:active {
+        td {
+          background: lighten($warning, 24%);
+        }
+      }
+    }
+
+    tr.danger {
+      td {
+        background: lighten($danger, 30%);
+      }
+
+      &:hover, &:focus, &:active {
+        td {
+          background: lighten($danger, 26%);
+        }
+      }
+    }
+  }
+
+  // Forms
+  form {
+    .form-group {
+      position: relative;
+      margin-bottom: 30px;
+
+      .form-control {
+        font-size:18px;
+        padding:10px 10px 10px 5px;
+        display:block;
+        border:none;
+        border-bottom:1px solid $primary;
+        height: auto;
+        border-radius: 0px;
+        box-shadow: none;
+
+        &:focus {
+          outline:none;
+          box-shadow: none;
+
+          ~ label {
+            top:-20px;
+            font-size:14px;
+            color: $primary;
+          }
+
+          ~ .bar:before, ~ .bar:after {
+            width: 50%;
+          }
+        }
+
+        &:valid ~ label {
+          top:-20px;
+          font-size:14px;
+          color:$primary;
+        }
+
+        &.has-error {
+          border-bottom: 1px solid $danger;
+          &:focus ~ label {
+            color: $danger;
+          }
+
+          &:valid ~ label {
+            color: $danger;
+          }
+        }
+      }
+
+      label {
+        color:#999;
+        font-size:18px;
+        font-weight:normal;
+        position:absolute;
+        pointer-events:none;
+        left:5px;
+        top:10px;
+        transition:0.2s ease all;
+
+        &.has-error {
+          color: $danger;
+        }
+      }
+
+      .bar {
+        position:relative;
+        display:block;
+        width:100%;
+
+        &:before, &:after {
+          content:'';
+          height:2px;
+          width:0;
+          bottom:1px;
+          position:absolute;
+          background:$primary;
+          transition:0.2s ease all;
+        }
+
+        &.has-error {
+          &:before, &:after {
+            background: $danger;
+          }
+        }
+
+        &:before {
+          left:50%;
+        }
+
+        &:after {
+          right:50%;
+        }
+      }
+    }
+  }
+
+  // Navs
+  ul.nav {
+    &.nav-tabs {
+      > li {
+        > a {
+          border-radius: 0px;
+        }
+      }
+    }
+
+    .open {
+      > a, > a:focus, > a:hover {
+        border-color: $default;
+      }
+    }
+
+    &.nav-pills {
+      > li {
+        > a {
+          border-radius: 0px;
+        }
+
+        &.active {
+          a, a:focus, a:active, a:hover {
+            background: $default;
+
+            > .badge {
+              color: $default;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    > .active {
+      background: #FFFFFF;
+      padding: 10px;
+      border-left: solid 1px #DDDDDD;
+      border-right: solid 1px #DDDDDD;
+      border-bottom: solid 1px #DDDDDD;
+    }
+  }
+
+  .breadcrumb {
+    background: transparent;
+  }
+
+  .pagination {
+    border-radius: 0px;
+
+    > li {
+      &:first-child, &:last-child {
+        a, span {
+          border-radius: 0px;
+        }
+      }
+
+      a {
+        color: $default;
+
+        &:hover, &:active, &:focus {
+          color: darken($default, 20%);
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+          background: #FFFFFF;
+        }
+      }
+
+      &.active {
+        a {
+          background: $default;
+          border-color: $default;
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+          &:hover, &:active, &:focus {
+            background: $default;
+            border-color: $default;
+          }
+        }
+      }
+    }
+  }
+
+  .pager {
+    > li {
+      > a {
+        &:hover, &:focus, &:active {
+          background: #FFFFFF;
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  // Indicators
+  .alert {
+    border-radius: 0px;
+
+    &.alert-warning {
+      color: lighten($warning, 30%);
+      background: darken($warning, 18%);
+    }
+
+    &.alert-danger {
+      color: lighten($danger, 35%);
+      background: darken($danger, 1%);
+
+      .alert-link {
+        color: lighten($danger, 40%);
+      }
+    }
+
+    &.alert-success {
+      color: lighten($success, 35%);
+      background: darken($success, 1%);
+
+      .alert-link {
+        color: lighten($success, 40%);
+      }
+    }
+
+    &.alert-info {
+      color: lighten($info, 38%);
+      background: darken($info, 1%);
+
+      .alert-link {
+        color: lighten($info, 40%);
+      }
+    }
+
+    button.close {
+      color: lighten($warning, 30%);
+      opacity: .8;
+    }
+  }
+
+  .label {
+    border-radius: 0px;
+
+    &.label-default {
+      background: $default;
+    }
+
+    &.label-primary {
+      background: $primary;
+    }
+
+    &.label-success {
+      background: $success;
+    }
+
+    &.label-warning {
+      background: $warning;
+    }
+
+    &.label-danger {
+      background: $danger;
+    }
+
+    &.label-info {
+      background: $info;
+    }
+  }
+
+  .badge {
+    background: $default;
+  }
+
+  // Progress bars
+  .progress {
+    .progress-bar {
+      background-color: $default;
+
+      &.progress-bar-info {
+        background-color: $info;
+      }
+
+      &.progress-bar-success {
+        background-color: $success;
+      }
+
+      &.progress-bar-warning {
+        background-color: $warning;
+      }
+
+      &.progress-bar-danger {
+        background-color: $danger;
+      }
+    }
+  }
+
+  // Containers
+  .container{
+    .jumbotron {
+      border-radius: 0px;
+      background: #FFFFFF;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    .list-group {
+      .list-group-item {
+        &:first-child, &:last-child {
+          border-radius: 0px;
+        }
+
+        &.active, &.active:hover, &.active:focus, &.active:active {
+          background: $default;
+          border-color: $default;
+        }
+      }
+    }
+
+    .well {
+      padding: 20px;
+      border-radius: 0px;
+      background: #FFFFFF;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 2px;
+      display: inline-block;
+      height: auto;
+      margin: 1rem;
+      position: relative;
+      width: 100%;
+      padding: 40px;
+
+      &.default {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      }
+
+      &.deep {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+      }
+
+      &.deeper {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+      }
+
+      &.hover {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+        &:hover {
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        }
+      }
+    }
+
+    .panel {
+      border-radius: 0px;
+      border: none;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+      &.panel-primary {
+        > .panel-heading {
+          background: $primary;
+          border-radius: 0px;
+
+          .panel-title {
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      &.panel-success {
+        > .panel-heading {
+          background: $success;
+          border-radius: 0px;
+
+          .panel-title {
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      &.panel-warning {
+        > .panel-heading {
+          background: $warning;
+          border-radius: 0px;
+
+          .panel-title {
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      &.panel-danger {
+        > .panel-heading {
+          background: $danger;
+          border-radius: 0px;
+
+          .panel-title {
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      &.panel-info {
+        > .panel-heading {
+          background: $info;
+          border-radius: 0px;
+
+          .panel-title {
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
   }
 }
