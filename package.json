@@ -16,7 +16,6 @@
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.3",
-    "font-awesome": "^4.7.0",
     "laravel-mix": "0.*",
     "lodash": "^4.17.4"
   },
@@ -29,6 +28,15 @@
   "sass": "assets/scss/_material_bootstrap.scss",
   "style": "assets/scss/_material_bootstrap.scss",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "select2": "^4.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roksta21/material-bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roksta21/material-bootstrap/issues"
+  },
+  "homepage": "https://github.com/roksta21/material-bootstrap#readme"
 }
