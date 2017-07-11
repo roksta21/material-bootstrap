@@ -55,39 +55,39 @@ body {
       }
     }
 
-    &.navbar-inverse {
-      background: $navbar_inverse_background;
+    &.navbar-primary {
+      background: $navbar_primary_background;
 
       .navbar-brand {
-        color: $navbar_inverse_content_color;
+        color: $navbar_primary_content_color;
       }
 
       .navbar-nav {
         > .active {
           > a {
-            color: $navbar_inverse_content_color;
-            background: darken($navbar_inverse_background, 20%);
+            color: $navbar_primary_content_color;
+            background: darken($navbar_primary_background, 20%);
 
             &:hover, &:active, &:focus {
-              background: darken($navbar_inverse_background, 20%);
+              background: darken($navbar_primary_background, 20%);
             }
           }
         }
 
         > li {
           > a {
-            color: $navbar_inverse_content_color;
+            color: $navbar_primary_content_color;
 
             &:hover, &:active, &:focus {
-              background: darken($navbar_inverse_background, 10%);
+              background: darken($navbar_primary_background, 10%);
             }
           }
         }
 
         > .open {
           > a, > a:focus, > a:active, > a:hover {
-            background: darken($navbar_inverse_background, 10%);
-            color: $navbar_inverse_content_color;
+            background: darken($navbar_primary_background, 10%);
+            color: $navbar_primary_content_color;
           }
         }
       }
@@ -277,6 +277,10 @@ body {
 
   .text-success {
     color: $success;
+  }
+
+  h1, h2, h3, h4, h5 {
+    text-transform: capitalize;
   }
 
   // Tables
