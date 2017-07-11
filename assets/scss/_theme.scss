@@ -55,6 +55,44 @@ body {
       }
     }
 
+    &.navbar-inverse {
+      background: $navbar_inverse_background;
+
+      .navbar-brand {
+        color: $navbar_inverse_content_color;
+      }
+
+      .navbar-nav {
+        > .active {
+          > a {
+            color: $navbar_inverse_content_color;
+            background: darken($navbar_inverse_background, 20%);
+
+            &:hover, &:active, &:focus {
+              background: darken($navbar_inverse_background, 20%);
+            }
+          }
+        }
+
+        > li {
+          > a {
+            color: $navbar_inverse_content_color;
+
+            &:hover, &:active, &:focus {
+              background: darken($navbar_inverse_background, 10%);
+            }
+          }
+        }
+
+        > .open {
+          > a, > a:focus, > a:active, > a:hover {
+            background: darken($navbar_inverse_background, 10%);
+            color: $navbar_inverse_content_color;
+          }
+        }
+      }
+    }
+
     .navbar-form {
       .form-group {
         .form-control {

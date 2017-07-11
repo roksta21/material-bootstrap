@@ -1,19 +1,14 @@
-// Require the components that are needed;
-// require('select2');
+// Jquery
+window.$ = window.jQuery = require('jquery');
 
-$(document).ready(function() {
-    // Stop that annoying back to top that results in pressing <a href="#">..</a>
-    $('a').click(function(event) {
-        var destination = $(event.target).attr('href');
-        if (destination == '#' || destination == '') {
-            event.preventDefault();
-        }
-    });
+// Bootstrap-js
+require('bootstrap-sass');
 
-    // Instanciate select2 on all select boxes except those with class .no-select
-    // $('select').not('.no-select').select2();
+// Select2
+require('select2');
 
-    // Add styling to forms
-    $('form .form-group').append('<div class="bar"></bar>');
+// Ripple-js
+window.ripple = require('ripple-js');
 
-});
+// Theme style
+require('./style');
