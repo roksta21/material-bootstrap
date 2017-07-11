@@ -1,6 +1,6 @@
 {
   "name": "material-bootstrap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "my materialization of bootstrap",
   "main": "assets/js/material_bootstrap.js",
   "scripts": {
