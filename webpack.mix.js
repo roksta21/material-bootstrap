@@ -14,4 +14,6 @@ const { mix } = require('laravel-mix');
 mix
     .js('assets/js/material_bootstrap.js', 'dist')
 
+    .js('samples/app.js', 'samples/compiled.js')
+
     .sass('assets/scss/material_bootstrap.scss', 'dist');

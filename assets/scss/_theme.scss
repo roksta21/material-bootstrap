@@ -101,6 +101,84 @@ body {
       }
     }
   }
+  // Side Bar
+  .has-side-bar {
+    header {
+      nav {
+        &.navbar-default {
+          left: 200px;
+        }
+      }
+    }
+  }
+
+  .side-bar {
+    bottom: 0;
+    width: 200px;
+    overflow: auto;
+    background-color: #FFF;
+    transition: transform 2s;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    .side-nav {
+      .brand {
+        text-align: center;
+        border-bottom: 2px solid $primary;
+        padding-bottom: 20px;
+
+        a {
+          color: $primary;
+
+          &:hover {
+            text-decoration: none;
+            color: darken($primary, 20%);
+          }
+        }
+      }
+
+      ul.parent {
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding-left: 0;
+        font-size: 13px;
+
+        & > li {
+          padding: 15px 22px;
+          cursor: pointer;
+
+          &:hover {
+            background: #E0E0E0;
+          }
+
+          &.open:hover {
+            background: transparent;
+          }
+
+          ul.child {
+            list-style: none;
+            padding: 6px 20px;
+            display: none;
+
+            &.open {
+              display: block;
+              cursor: default;
+            }
+
+            > li  {
+              padding: 5px 0;
+
+              > a {
+                color: $white_text;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
   // Buttons
   .btn {
