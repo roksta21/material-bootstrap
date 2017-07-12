@@ -1,3 +1,6 @@
+// Lodash
+window._ = require('lodash');
+
 // Jquery
 window.$ = window.jQuery = require('jquery');
 

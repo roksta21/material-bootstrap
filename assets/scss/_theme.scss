@@ -100,6 +100,14 @@ body {
         }
       }
     }
+
+    .btn-nav {
+      height: 50px;
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      color: $white_text;
+    }
   }
   // Side Bar
   .has-side-bar {
@@ -145,38 +153,74 @@ body {
         padding-left: 0;
         font-size: 13px;
 
-        & > li {
-          padding: 15px 22px;
-          cursor: pointer;
+        a {
+          > li {
+            padding: 15px 22px;
+            cursor: pointer;
 
-          &:hover {
-            background: #E0E0E0;
-          }
-
-          &.open:hover {
-            background: transparent;
-          }
-
-          ul.child {
-            list-style: none;
-            padding: 6px 20px;
-            display: none;
-
-            &.open {
-              display: block;
-              cursor: default;
+            &:hover {
+              background: lighten($primary, 33%);
+              border-top: 1px solid $white_text;
+              border-bottom: 1px solid $white_text;
             }
 
-            > li  {
-              padding: 5px 0;
+            &.open:hover {
+              background: transparent;
+            }
 
-              > a {
-                color: $white_text;
+            ul.child {
+              list-style: none;
+              padding: 6px 20px;
+              display: none;
+
+              &.open {
+                display: block;
+                cursor: default;
+              }
+
+              > li  {
+                padding: 5px 0;
+
+                > a {
+                  color: $white_text;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &.router-link-exact-active {
+            li {
+              color: darken($primary, 20%);
+              background: lighten($primary, 33%);
+
+              &:hover {
+                color: darken($primary, 20%);
+                background: lighten($primary, 33%);
               }
             }
           }
         }
       }
+    }
+  }
+
+  .main-content {
+    margin-left: 200px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    min-height: 100%;
+    overflow-x: hidden;
+    transition: margin-left .2s;
+    margin-bottom: -160px;
+    padding-bottom: 160px;
+    margin-top: 75px;
+
+    &.full {
+      margin-left: 0;
     }
   }
 
@@ -701,7 +745,7 @@ body {
   }
 
   // Containers
-  .container{
+  .container, .container-fluid{
     .jumbotron {
       border-radius: 0px;
       background: #FFFFFF;
