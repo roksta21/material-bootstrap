@@ -1,15 +1,8 @@
 <template>
     <div>
+        <h1>Forms and Inputs</h1>
         <div class="bs-docs-section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-header">
-                        <h1 id="forms">Forms</h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
+           <div class="row">
                 <div class="col-lg-6">
                     <div class="well bs-component">
                         <form class="">

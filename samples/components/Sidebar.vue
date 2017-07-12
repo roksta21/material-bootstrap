@@ -16,9 +16,9 @@
                         <strong>Installation</strong>
                     </li>
                 </router-link>
-                <router-link to="/nav">
+                <router-link to="/navbar">
                     <li>
-                        <strong>Nav</strong>
+                        <strong>Navbar</strong>
                     </li>
                 </router-link>
                 <router-link to="/buttons">

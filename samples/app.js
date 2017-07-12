@@ -1,6 +1,6 @@
 // Routes
 const routes = [
-    { path: '/', component: require('./pages/Welcome.vue')},
+    { path: '/', component: require('./pages/Introduction.vue')},
     { path: '/installation', component: require('./pages/Installation.vue')},
     { path: '/buttons', component: require('./pages/Buttons.vue')},
     { path: '/containers', component: require('./pages/Containers.vue')},
@@ -8,7 +8,7 @@ const routes = [
     { path: '/forms', component: require('./pages/Forms.vue')},
     { path: '/icons', component: require('./pages/Icons.vue')},
     { path: '/indicators', component: require('./pages/Indicators.vue')},
-    { path: '/nav', component: require('./pages/Nav.vue')},
+    { path: '/navbar', component: require('./pages/Navbar.vue')},
     { path: '/navs', component: require('./pages/Navs.vue')},
     { path: '/progress-bars', component: require('./pages/ProgressBars.vue')},
     { path: '/tables', component: require('./pages/Tables.vue')},
