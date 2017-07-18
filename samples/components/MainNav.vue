@@ -23,25 +23,6 @@
                     <ul class="nav navbar-nav">
                         &nbsp;
                     </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Name here <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href=""
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>

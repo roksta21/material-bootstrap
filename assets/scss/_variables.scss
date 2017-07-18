@@ -3,9 +3,9 @@ $body_background: #EEEEEE !default;
 $default_text: rgba(0,0,0,.87) !default;
 $white_text: #FFFFFF !default;
 
-$primary: #78909C !default;
+$primary: #9C27B0 !default;
 $danger: #F44336 !default;
-$default: #78909C !default;
+$default: $primary !default;
 $warning: #f0ad4e !default;
 $info: #03A9F4 !default;
 $success: #4CAF50 !default;

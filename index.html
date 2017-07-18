@@ -7,6 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="dist/material_bootstrap.css">
 
+    <style type="text/css">
+        .fade-enter-active, .fade-leave-active {
+          transition: opacity .2s
+        }
+        .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+          opacity: 0
+        }
+    </style>
+
 </head>
 <body>
 
@@ -15,7 +24,9 @@
     <main-nav></main-nav>
     <div class="main-content">
         <div class="container-fluid">
-            <router-view></router-view>
+            <transition name="fade">
+                <router-view></router-view>
+            </transition>
         </div>
     </div>
 </div>
